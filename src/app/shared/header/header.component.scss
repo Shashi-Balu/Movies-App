@@ -15,16 +15,16 @@ header {
                 width: 60px;
             }
         }
-    }
 
-    &-links {
-        display: block;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        li {
-            display: inline;
-            margin-right: 15px;
+        &-links {
+            display: block;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            li {
+                display: inline;
+                margin-right: 15px;
+            }
         }
     }
 }
