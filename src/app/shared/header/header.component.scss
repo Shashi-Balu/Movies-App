@@ -1,3 +1,4 @@
+@import '../../../styles/colors.scss';
 header {
     .navbar {
         display: flex;
@@ -5,8 +6,25 @@ header {
         justify-content: space-between;
         padding: 0.5rem 1rem;
         height: 65px;
-        background-color: #000;
+        background-color: $bgColor;
         margin: 0;
-        border: 1px solid #fff;
+        border-bottom: 1px solid $primaryGreen;
+        &-logo {
+            display: block;
+            img {
+                width: 60px;
+            }
+        }
+    }
+
+    &-links {
+        display: block;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+            display: inline;
+            margin-right: 15px;
+        }
     }
 }
