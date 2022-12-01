@@ -4,22 +4,21 @@
     <ng-container *ngFor="let item of items; let i = index">
         <div class="slide" *ngIf="i == currentSlideIndex" @slideFade>
             <div class="slide-bg">
-                <img
-                    class="slide-bg-image"
-                    [src]="'https://image.tmdb.org/t/p/original/' + item.backdrop_path"
-                    alt=""
-                />
+                <img class="slide-bg-image" [src]="imagesSizes.large + item.poster_path" alt="" />
             </div>
             <div class="slide-pane">
                 <h2 class="name">{{ item.title }}</h2>
                 <div class="meta">
                     <div class="info">
                         <span class="rating">
-                            <span class="app-icon">star</span
-                            ><span class="rating-value">{{ item.vote_average }}</span
-                            ><span class="separate">/10</span
-                            ><span class="separate">{{ item.vote_count }}</span
-                            ><span>{{ item.release_date | date: 'yyyy' }}</span>
+                            <span class="app-icon">star</span>
+                            <ng-container *ngIf="item.vote_average != 0 || item.vote_count != 0">
+                                <span class="rating-value">{{ item.vote_average }}</span
+                                ><span class="separate">/10</span
+                                ><span class="separate">{{ item.vote_count }} reviews</span>
+                            </ng-container>
+
+                            <span>{{ item.release_date | date : 'yyyy' }}</span>
                         </span>
                     </div>
                     <div class="desc mt-6">
