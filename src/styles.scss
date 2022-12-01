@@ -2,6 +2,7 @@
 @import './styles/init-css';
 @import './styles/colors.scss';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&family=Quicksand:wght@300;500;600;700&display=swap');
+@import 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined';
 @import '~primeflex/primeflex.css';
 body {
     font-family: 'Poppins', sans-serif;
@@ -13,4 +14,18 @@ body {
 a {
     text-decoration: none;
     color: $white;
+}
+
+.app-icon {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
 }
