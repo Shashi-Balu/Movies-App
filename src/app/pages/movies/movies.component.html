@@ -4,5 +4,10 @@
             <app-item [itemData]="movie"></app-item>
         </div>
     </div>
-    <p-paginator [rows]="20" [totalRecords]="10000" (onPageChange)="paginate($event)"></p-paginator>
+    <p-paginator
+        [ngStyle]="{ backgroundColor: 'var(--pink-500)' }"
+        [rows]="20"
+        [totalRecords]="10000"
+        (onPageChange)="paginate($event)"
+    ></p-paginator>
 </div>
